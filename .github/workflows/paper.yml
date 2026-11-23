@@ -11,18 +11,18 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 65
+    timeout-minutes: 66
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install requests tzdata
-      - run: python paper.py hour
+      - run: python paper_us.py run
       - name: Save results
         run: |
           git config user.name "paper-bot"
           git config user.email "paper-bot@users.noreply.github.com"
-          git add -A data SUMMARY.md
+          git add -A data_us SUMMARY_US.md
           git commit -m "paper bot: $(date -u +%Y-%m-%dT%H:%MZ)" || exit 0
           for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
