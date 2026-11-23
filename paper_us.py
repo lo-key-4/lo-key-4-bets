@@ -142,7 +142,11 @@ TRADE = ["time_utc", "strategy", "kind", "market", "window_end", "side", "entry"
 
 # ------------------------------ main loop ------------------------------
 def run():
-    end_of_run = (int(time.time()) // 3600) * 3600 + STOP_AT_MIN * 60
+    now = time.time()
+    end_of_run = (int(now) // 3600) * 3600 + STOP_AT_MIN * 60
+    if end_of_run - now < 5 * 60:          # started late (GitHub delays): cover the next hour instead
+        end_of_run += 3600
+    end_of_run = min(end_of_run, now + 60 * 60)
     vol, vol_t, snap_t = None, 0, 0
     state = {}   # market -> {"taker":bool, "scalp":dict|None/'done', "maker_n":int, "quotes":(bid,ask,fv), "traded":float}
     day = datetime.now(timezone.utc).strftime("%Y-%m-%d"); polls = 0
