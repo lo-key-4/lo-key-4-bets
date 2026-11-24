@@ -1,14 +1,14 @@
 # Polymarket US paper bot -- running results
 
-_Updated Nov 24, 11:59 AM ET. No real money. Real bids/asks, Polymarket US fees included._
+_Updated Nov 24, 12:59 PM ET. No real money. Real bids/asks, Polymarket US fees included._
 
 | Strategy | Market | Trades | Win rate | Staked | P&L | ROI | vs 3.2% |
 |---|---|---|---|---|---|---|---|
-| TAKER | 5m | 135 | 54% | $1,350 | $+160.13 | +11.9% | ABOVE |
-| TAKER | 15m | 49 | 47% | $490 | $+180.51 | +36.8% | ABOVE |
-| TAKER | 1h | 13 | 38% | $130 | $-59.90 | -46.1% | below |
+| TAKER | 5m | 137 | 53% | $1,370 | $+138.81 | +10.1% | ABOVE |
+| TAKER | 15m | 50 | 46% | $500 | $+170.06 | +34.0% | ABOVE |
+| TAKER | 1h | 14 | 36% | $140 | $-70.55 | -50.4% | below |
 | SCALP | 5m | 95 | 53% | $950 | $-67.11 | -7.1% | below |
-| SCALP | 15m | 42 | 45% | $420 | $-47.68 | -11.4% | below |
-| MAKER | 5m | 266 | 40% | $1,125 | $-64.55 | -5.7% | below |
-| MAKER | 15m | 146 | 39% | $646 | $-76.23 | -11.8% | below |
-| MAKER | 1h | 40 | 52% | $218 | $-9.84 | -4.5% | below |
+| SCALP | 15m | 43 | 44% | $430 | $-54.19 | -12.6% | below |
+| MAKER | 5m | 272 | 39% | $1,135 | $-74.69 | -6.6% | below |
+| MAKER | 15m | 149 | 40% | $658 | $-58.35 | -8.9% | below |
+| MAKER | 1h | 43 | 49% | $230 | $-21.62 | -9.4% | below |
